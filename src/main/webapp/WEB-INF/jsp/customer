@@ -1,0 +1,28 @@
+
+   function calculateTotal($this)
+   {
+
+
+
+    var price_of_attr = parseInt($(this).val()) * $('#price').text().trim(); //get data price
+     let item_price={}
+     var pp = $('#price').text().trim();
+     item_price = ( pp *  $('#quantity').val()) ;
+     console.log(item_price);
+
+ };
+<div id="price" style="float:left; margin-left:200px;" >
+ $('#quantity').change(function() {
+   calculateTotal(this);
+ });
+
+  $(function()
+   {
+      $('#quantity').on('click','#price', function() {
+    var price_of_attr = parseInt($(this).val()) * $('#price').text().trim(); //get data price
+     let item_price={}
+     var pp = $('#price').text().trim();
+     item_price = ( pp *  $('#quantity').val()) ;
+     console.log(item_price);    
+});
+  });
